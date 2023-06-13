@@ -1,0 +1,68 @@
+.sub-div{
+    /* border: 1px solid #0D6EFD; */
+    border-radius: 10px;
+    box-shadow: rgba(67, 71, 85, 0.27) 1px 1px 1em;
+    background-color: white;
+    height: 500px;
+    width: 500px;
+    margin: 10px;
+    padding-top: 30px;
+  }
+  .sub-div:hover{
+    
+    border: 1px solid #0D6EFD;
+    
+  }
+  .log-list-div{
+  
+    height: 300px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    border: 1px solid #0D6EFD ;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  ::-webkit-scrollbar{
+    width: 3px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track{
+    background: white;
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #0D6EFD;
+    width: 10px;
+    border-radius: 50px;
+  }
+ 
+  .list-item{
+     display: flex;
+     justify-content:space-between; 
+  }
+  
+  
+  .my-Icon:hover{
+    cursor: pointer;
+    color: red;
+  }
+
+  .list-row{
+    
+    /* border: 1px solid #0D6EFD; */
+    color: #0D6EFD;
+    /* background-color: #0D6EFD; */
+    
+  }
+
+  .list-row:hover {
+    background-color: #0D6EFD;
+    color: white;
+    cursor: pointer;
+    
+  }
+  
+  .log-Status{
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+  }

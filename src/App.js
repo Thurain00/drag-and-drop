@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+
+import Fileupload from "./components/Fileupload/Fileupload";
+import FileUploadHistory from "./components/FileUploadHistory/FileUploadHistory";
+import Test from "./components/Test"
 
 function App() {
+  const initialState=JSON.parse(localStorage.getItem('uploadFile'))|| [ ];
+  const [uploadFile, setUploadFile] = useState(initialState);
+
+
+  const uploadFileHandle = (fileUpload) => {
+    setUploadFile(fileUpload);
+
+  };
+ useEffect(()=>{
+   localStorage.setItem('uploadFile',JSON.stringify(uploadFile))
+ },[uploadFile]);
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Fileupload uploadFile={uploadFile} setUploadFile={uploadFileHandle} />
+
+      
+      {/* <FileUploadHistory
+        uploadFile={uploadFile}
+        setUploadFile={uploadFileHandle}
+        
+      />  */}
+     
+    <Test  uploadFile={uploadFile}
+        setUploadFile={uploadFileHandle}/>
+
     </div>
   );
 }
